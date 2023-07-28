@@ -4,7 +4,7 @@ my minimal typeScript library development template
 
 # use
 
-Globally replace `startup-ts` for your project name
+globally replace `startup-ts` for your project name
 
 ## License
 

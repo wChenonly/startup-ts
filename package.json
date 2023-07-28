@@ -1,0 +1,71 @@
+{
+  "name": "startup-ts",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@8.6.10",
+  "description": "",
+  "author": "wChenonly",
+  "license": "MIT",
+  "homepage": "https://github.com/wChenonly/startup-ts#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wChenonly/startup-ts.git"
+  },
+  "bugs": "https://github.com/wChenonly/startup-ts/issues",
+  "keywords": [
+    "startup",
+    "ts",
+    "template"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsx ./esbuild.ts -w",
+    "build": "rimraf dist && nr build:type && tsx ./esbuild.ts",
+    "build:type": "tsc --emitDeclarationOnly",
+    "lint:fix": "eslint . --fix",
+    "prepublishOnly": "nr build",
+    "release": "bumpp && npm publish"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.8",
+    "@antfu/ni": "^0.21.5",
+    "@types/node": "^20.4.5",
+    "bumpp": "^9.1.1",
+    "esbuild": "^0.18.17",
+    "eslint": "^8.45.0",
+    "nano-staged": "^0.8.0",
+    "picocolors": "^1.0.0",
+    "rimraf": "^5.0.1",
+    "simple-git-hooks": "^2.9.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6",
+    "vite": "^4.4.7"
+  },
+  "nano-staged": {
+    "*": "eslint . --fix"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx nano-staged"
+  }
+}

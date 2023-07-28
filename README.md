@@ -1,6 +1,6 @@
 # startup-ts
 
-my minimal typeScript library development template
+wChenonly's minimal typeScript library template
 
 # use
 

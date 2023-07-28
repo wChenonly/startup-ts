@@ -1,8 +1,8 @@
 # startup-ts
 
-My minimal TS library development template
+my minimal typeScript library development template
 
-# Use
+# use
 
 Globally replace `startup-ts` for your project name
 

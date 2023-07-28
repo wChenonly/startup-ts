@@ -2,7 +2,7 @@
 
 My minimal TS library development template
 
-# Useage
+# Use
 
 Globally replace `startup-ts` for your project name
 

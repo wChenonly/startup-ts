@@ -2,7 +2,7 @@
   "name": "startup-ts",
   "type": "module",
   "version": "0.0.0",
-  "packageManager": "pnpm@8.6.11",
+  "packageManager": "pnpm@8.6.12",
   "description": "wChenonly's minimal typeScript library template",
   "author": "wChenonly",
   "license": "MIT",
@@ -50,19 +50,19 @@
     "release": "bumpp && npm publish"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.40.0",
+    "@antfu/eslint-config": "^0.40.2",
     "@antfu/ni": "^0.21.5",
-    "@types/node": "^20.4.6",
+    "@types/node": "^20.5.0",
     "bumpp": "^9.1.1",
-    "esbuild": "^0.18.17",
-    "eslint": "^8.46.0",
+    "esbuild": "^0.19.2",
+    "eslint": "^8.47.0",
     "nano-staged": "^0.8.0",
     "picocolors": "^1.0.0",
     "rimraf": "^5.0.1",
     "simple-git-hooks": "^2.9.0",
     "tsx": "^3.12.7",
     "typescript": "^5.1.6",
-    "vite": "^4.4.8"
+    "vite": "^4.4.9"
   },
   "nano-staged": {
     "*": "eslint . --fix"

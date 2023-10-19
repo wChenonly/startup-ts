@@ -2,7 +2,7 @@
   "name": "startup-ts",
   "type": "module",
   "version": "0.0.0",
-  "packageManager": "pnpm@8.6.12",
+  "packageManager": "pnpm@8.9.2",
   "description": "wChenonly's minimal typeScript library template",
   "author": "wChenonly",
   "license": "MIT",
@@ -42,6 +42,7 @@
     "dist"
   ],
   "scripts": {
+    "build:tsup": "tsup src/index.ts --dts --format esm,cjs,iife --clean --legacy-output dist/index.mjs",
     "dev": "tsx ./esbuild.ts -w",
     "build": "rimraf dist && nr build:type && tsx ./esbuild.ts",
     "build:type": "tsc --emitDeclarationOnly",
@@ -50,19 +51,20 @@
     "release": "bumpp && npm publish"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.40.2",
-    "@antfu/ni": "^0.21.5",
-    "@types/node": "^20.5.0",
-    "bumpp": "^9.1.1",
-    "esbuild": "^0.19.2",
-    "eslint": "^8.47.0",
+    "@antfu/eslint-config": "^1.0.0-beta.27",
+    "@antfu/ni": "^0.21.8",
+    "@types/node": "^20.8.7",
+    "bumpp": "^9.2.0",
+    "esbuild": "^0.19.5",
+    "eslint": "^8.51.0",
     "nano-staged": "^0.8.0",
     "picocolors": "^1.0.0",
-    "rimraf": "^5.0.1",
+    "rimraf": "^5.0.5",
     "simple-git-hooks": "^2.9.0",
-    "tsx": "^3.12.7",
-    "typescript": "^5.1.6",
-    "vite": "^4.4.9"
+    "tsup": "^7.2.0",
+    "tsx": "^3.14.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0"
   },
   "nano-staged": {
     "*": "eslint . --fix"
